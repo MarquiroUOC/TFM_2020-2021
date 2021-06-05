@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<SdlFSMDiagram language="sdl" type="prcs" is_extract="FALSE" is_temporary="FALSE">
+<SdlFSMPartition name="" needs_cleanup="FALSE">
+<SdlFSMSymbol identifier="SYM24" type="sdlText" text="DCL l Integer:= 0, t Integer:= 0, ptotal Integer:= 0,
+sitio Integer := 4;
+Timer T;" outline_color="-" background_color="-" center_coordinates="455 61" dimensions="392 64" attached_symbol_id=""/>
+<NonStateTransition top_left_coordinates="273 137">
+<SdlFSMSymbol identifier="SYM1" type="sdlStart" outline_color="-" background_color="-" center_coordinates="370 152" dimensions="60 30" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM2" type="sdlState" text="esperando_paciente" outline_color="-" background_color="-" center_coordinates="370 199" dimensions="146 40" attached_symbol_id=""/>
+</Transition>
+</NonStateTransition>
+<StateTransitionBlock>
+<SdlFSMSymbolReference identifier="SYM2"/>
+<NormalStateTransition>
+<SdlFSMSymbol identifier="SYM3" type="sdlInputSig" text="paciente(t)" outline_color="-" background_color="-" center_coordinates="370 251" dimensions="96 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM43" type="sdlTask" text="ptotal:= ptotal + t" outline_color="-" background_color="-" center_coordinates="370 303" dimensions="152 40" attached_symbol_id=""/>
+<DecisionBlock>
+<SdlFSMSymbol identifier="SYM4" type="sdlDecision" text="ptotal" outline_color="-" background_color="-" center_coordinates="370 355" dimensions="62 40" attached_symbol_id=""/>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM5" type="sdlAnswer" text="&lt;= sitio" outline_color="-" background_color="-" center_coordinates="370 407" dimensions="76 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM42" type="sdlTask" text="sitio := sitio - ptotal" outline_color="-" background_color="-" center_coordinates="370 459" dimensions="180 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM41" type="sdlSendSig" text="sitiolibre(ptotal) VIA C6" outline_color="-" background_color="-" center_coordinates="370 511" dimensions="194 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM48" type="sdlTask" text="ptotal:= 0" outline_color="-" background_color="-" center_coordinates="370 563" dimensions="90 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM49" type="sdlState" text="esperando_paciente" outline_color="-" background_color="-" center_coordinates="370 615" dimensions="146 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM6" type="sdlAnswer" text="else" outline_color="-" background_color="-" center_coordinates="518 407" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM44" type="sdlTask" text="sitio:= 0" outline_color="-" background_color="-" center_coordinates="518 459" dimensions="82 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+</DecisionBlock>
+</Transition>
+</NormalStateTransition>
+<NormalStateTransition>
+<SdlFSMSymbol identifier="SYM50" type="sdlInputSig" text="libre(l)" outline_color="-" background_color="-" center_coordinates="638 251" dimensions="76 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM51" type="sdlTask" text="sitio:= sitio + l" outline_color="-" background_color="-" center_coordinates="638 303" dimensions="138 40" attached_symbol_id=""/>
+</Transition>
+</NormalStateTransition>
+</StateTransitionBlock>
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="1.0" bottomMargin="1.0" leftMargin="1.0" rightMargin="1.0" pageFooter="TRUE" scaleFactor="1.0"/>
+</SdlFSMPartition>
+</SdlFSMDiagram>

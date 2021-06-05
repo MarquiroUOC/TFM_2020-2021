@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<Diagram language="sdl" type="sys" defaultColorsNeedFixing="FALSE" name="CAP" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
+
+<DiagramPartition name="Part. 0" nbPagesH="1" nbPagesV="1">
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE" scaleFactor="1.0"/>
+
+<Symbol symbolId="SYMB1" type="sdlSysDgmFrm" xCenter="297" yCenter="420" fixedDimensions="TRUE" width="551" height="775" color="-" fillColor="-">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB2" type="sdlText" xCenter="264" yCenter="77" fixedDimensions="TRUE" width="484" height="132" color="#000000" fillColor="#FFFFFF">
+<Description></Description>
+<Text>SIGNAL turno(Integer), vacunado (Boolean), espera (Boolean), 
+sitioturno (Boolean), sitioespera (Boolean),
+nuevasvacunas(Integer), sitiovacunas(Integer), vacunas (Integer), 
+libre(Integer), sitiolibre (Integer), paciente (Integer), descansaenfermero (Integer),
+enfermeros(Integer), llegaenfermero(Integer);
+</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB3" type="sdlBlk" xCenter="154" yCenter="473" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#C4EFED">
+<Description></Description>
+<Text>bvacunacion</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB4" type="sdlBlk" xCenter="363" yCenter="550" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#C4EFED">
+<Description></Description>
+<Text>bsala_espera</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB5" type="sdlBlk" xCenter="319" yCenter="319" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#C4EFED">
+<Description></Description>
+<Text>bllegadavacunas</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB6" type="sdlBlk" xCenter="209" yCenter="715" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#C4EFED">
+<Description></Description>
+<Text>benfermeros</Text>
+</Symbol>
+</Symbol>
+
+<Link linkId="LINK22" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>C1</Text>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="w" position="-0.175483870968" endType="midarrow">
+<Text id="1">[sitioturno]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[turno]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="77"/>
+<LinkSegment orientation="v" length="154"/>
+<LinkSegment orientation="h" length="77"/>
+
+</Link>
+
+<Link linkId="LINK23" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>C4</Text>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="w" position="-0.544516129032" endType="midarrow">
+<Text id="1">[sitiovacunas]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[nuevasvacunas]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="88"/>
+<LinkSegment orientation="v" length="143"/>
+<LinkSegment orientation="h" length="231"/>
+
+</Link>
+
+<Link linkId="LINK35" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>C8</Text>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="w" position="0.647741935484" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB6" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[llegaenfermero]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="66"/>
+<LinkSegment orientation="v" length="77"/>
+<LinkSegment orientation="h" length="143"/>
+
+</Link>
+
+<Link linkId="LINK24" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>C2</Text>
+<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[sitioespera]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB4" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[vacunado]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="99"/>
+<LinkSegment orientation="v" length="77"/>
+<LinkSegment orientation="h" length="110"/>
+
+</Link>
+
+<Link linkId="LINK26" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>C3</Text>
+<Connector attachedSymbolId="SYMB4" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="e" position="-0.0903225806452" endType="midarrow">
+<Text id="1">[espera]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="88"/>
+<LinkSegment orientation="v" length="-198"/>
+<LinkSegment orientation="h" length="99"/>
+
+</Link>
+
+<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>C5</Text>
+<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[vacunas]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="88"/>
+<LinkSegment orientation="h" length="-165"/>
+<LinkSegment orientation="v" length="66"/>
+
+</Link>
+
+<Link linkId="LINK36" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>C9</Text>
+<Connector attachedSymbolId="SYMB6" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[descansaenfermero]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[enfermeros]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="-165"/>
+<LinkSegment orientation="h" length="-55"/>
+<LinkSegment orientation="v" length="-77"/>
+
+</Link>
+</DiagramPartition>
+
+</Diagram>

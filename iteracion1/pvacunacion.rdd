@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<Diagram language="sdl" type="blk" defaultColorsNeedFixing="FALSE" name="bvacunacion" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
+
+<DiagramPartition name="Part. 0" nbPagesH="1" nbPagesV="2">
+<PageSpecification pageWidth="21.0" pageHeight="5.0" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE" scaleFactor="1.0"/>
+
+<Symbol symbolId="SYMB11" type="sdlBlkDgmFrm" xCenter="297" yCenter="141" fixedDimensions="TRUE" width="551" height="217" color="-" fillColor="-">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB12" type="sdlPrcs" xCenter="264" yCenter="121" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#C4EFED">
+<Description></Description>
+<Text>pvacunacion</Text>
+</Symbol>
+</Symbol>
+
+<Link linkId="LINK40" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>C2
+</Text>
+<Connector attachedSymbolId="SYMB11" type="chnlgate" isOutside="FALSE" side="e" position="0.0184331797235" endType="midarrow">
+<Text id="1">[vacunado]
+</Text>
+<Text id="2">C2
+</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB12" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="-143"/>
+<LinkSegment orientation="v" length="11"/>
+<LinkSegment orientation="h" length="-143"/>
+
+</Link>
+
+<Link linkId="LINK41" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>C1
+</Text>
+<Connector attachedSymbolId="SYMB11" type="chnlgate" isOutside="FALSE" side="w" position="0.0184331797235" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">C1
+</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB12" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[turno]
+</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="132"/>
+<LinkSegment orientation="v" length="11"/>
+<LinkSegment orientation="h" length="132"/>
+
+</Link>
+</DiagramPartition>
+
+</Diagram>

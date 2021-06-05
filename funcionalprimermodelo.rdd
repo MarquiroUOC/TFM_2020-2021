@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<MscDiagram message_params_visibility="full">
+<LifelineOrdering identifiers="LIFELINEID_1 LIFELINEID_2 LIFELINEID_3"/>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="PROCESS_START" color="-" text="psala_espera
+(1)" text_size="0 -" background="-"/>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="PROCESS_START" color="-" text="pvacunacion
+(2)" text_size="0 -" background="-"/>
+<MscEvent lifeline_ids="LIFELINEID_3" event_type="PROCESS_START" color="-" text="RTDS_Env
+(-1)" text_size="0 -" background="-"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="CONDITION_START" color="-" model_id="PragmaDevStudio:symbol*c:\users\josé morato\downloads\tfm-marisa\psala_espera.rdd*SYM2" identifier="COND1" background="-" text="esperando_vacuna"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="-" text="esperando_vacuna" identifier="COND1" model_id="PragmaDevStudio:symbol*c:\users\josé morato\downloads\tfm-marisa\psala_espera.rdd*SYM2"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="-" model_id="PragmaDevStudio:symbol*c:\users\josé morato\downloads\tfm-marisa\proceso_vacunacion.rdd*SYM2" identifier="COND2" background="-" text="esperando_turno"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="-" text="esperando_turno" identifier="COND2" model_id="PragmaDevStudio:symbol*c:\users\josé morato\downloads\tfm-marisa\proceso_vacunacion.rdd*SYM2"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_3" event_type="MESSAGE_SEND" color="-" text="turno(|{param1|=1|})" identifier="MSG1"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="-" model_id="PragmaDevStudio:symbol*c:\users\josé morato\downloads\tfm-marisa\proceso_vacunacion.rdd*SYM3" identifier="MSG1" text="turno(|{param1|=1|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="-" text="T(120)" type="-" model_id="PragmaDevStudio:symbol*c:\users\josé morato\downloads\tfm-marisa\proceso_vacunacion.rdd*SYM8"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_CANCEL" color="-" text="T" type="-" model_id="PragmaDevStudio:symbol*c:\users\josé morato\downloads\tfm-marisa\proceso_vacunacion.rdd*SYM9"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="-" model_id="PragmaDevStudio:symbol*c:\users\josé morato\downloads\tfm-marisa\proceso_vacunacion.rdd*SYM11" identifier="MSG2" text="vacunado(|{param1|=1|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="-" model_id="PragmaDevStudio:symbol*c:\users\josé morato\downloads\tfm-marisa\proceso_vacunacion.rdd*SYM12" identifier="COND3" background="-" text="esperando_turno"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="-" text="esperando_turno" identifier="COND3" model_id="PragmaDevStudio:symbol*c:\users\josé morato\downloads\tfm-marisa\proceso_vacunacion.rdd*SYM12"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="-" model_id="PragmaDevStudio:symbol*c:\users\josé morato\downloads\tfm-marisa\psala_espera.rdd*SYM3" identifier="MSG2" text="vacunado(|{param1|=1|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="TIMER_START" color="-" text="T(900)" type="-" model_id="PragmaDevStudio:symbol*c:\users\josé morato\downloads\tfm-marisa\psala_espera.rdd*SYM8"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="TIMER_CANCEL" color="-" text="T" type="-" model_id="PragmaDevStudio:symbol*c:\users\josé morato\downloads\tfm-marisa\psala_espera.rdd*SYM9"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="-" model_id="PragmaDevStudio:symbol*c:\users\josé morato\downloads\tfm-marisa\psala_espera.rdd*SYM11" identifier="MSG3" text="espera(|{param1|=1|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_3" event_type="MESSAGE_RECEIVE" color="-" text="espera(|{param1|=1|})" identifier="MSG3"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="CONDITION_START" color="-" model_id="PragmaDevStudio:symbol*c:\users\josé morato\downloads\tfm-marisa\psala_espera.rdd*SYM12" identifier="COND4" background="-" text="esperando_vacuna"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="-" text="esperando_vacuna" identifier="COND4" model_id="PragmaDevStudio:symbol*c:\users\josé morato\downloads\tfm-marisa\psala_espera.rdd*SYM12"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_3" event_type="MESSAGE_SEND" color="-" text="turno(|{param1|=1|})" identifier="MSG4"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_RECEIVE" color="-" model_id="PragmaDevStudio:symbol*c:\users\josé morato\downloads\tfm-marisa\proceso_vacunacion.rdd*SYM3" identifier="MSG4" text="turno(|{param1|=1|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_START" color="-" text="T(120)" type="-" model_id="PragmaDevStudio:symbol*c:\users\josé morato\downloads\tfm-marisa\proceso_vacunacion.rdd*SYM8"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="TIMER_CANCEL" color="-" text="T" type="-" model_id="PragmaDevStudio:symbol*c:\users\josé morato\downloads\tfm-marisa\proceso_vacunacion.rdd*SYM9"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="MESSAGE_SEND" color="-" model_id="PragmaDevStudio:symbol*c:\users\josé morato\downloads\tfm-marisa\proceso_vacunacion.rdd*SYM11" identifier="MSG5" text="vacunado(|{param1|=1|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_2" event_type="CONDITION_START" color="-" model_id="PragmaDevStudio:symbol*c:\users\josé morato\downloads\tfm-marisa\proceso_vacunacion.rdd*SYM12" identifier="COND5" background="-" text="esperando_turno"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="-" text="esperando_turno" identifier="COND5" model_id="PragmaDevStudio:symbol*c:\users\josé morato\downloads\tfm-marisa\proceso_vacunacion.rdd*SYM12"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_RECEIVE" color="-" model_id="PragmaDevStudio:symbol*c:\users\josé morato\downloads\tfm-marisa\psala_espera.rdd*SYM3" identifier="MSG5" text="vacunado(|{param1|=1|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="TIMER_START" color="-" text="T(900)" type="-" model_id="PragmaDevStudio:symbol*c:\users\josé morato\downloads\tfm-marisa\psala_espera.rdd*SYM8"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="TIMER_CANCEL" color="-" text="T" type="-" model_id="PragmaDevStudio:symbol*c:\users\josé morato\downloads\tfm-marisa\psala_espera.rdd*SYM9"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="MESSAGE_SEND" color="-" model_id="PragmaDevStudio:symbol*c:\users\josé morato\downloads\tfm-marisa\psala_espera.rdd*SYM11" identifier="MSG6" text="espera(|{param1|=1|})"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_3" event_type="MESSAGE_RECEIVE" color="-" text="espera(|{param1|=1|})" identifier="MSG6"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent lifeline_ids="LIFELINEID_1" event_type="CONDITION_START" color="-" model_id="PragmaDevStudio:symbol*c:\users\josé morato\downloads\tfm-marisa\psala_espera.rdd*SYM12" identifier="COND6" background="-" text="esperando_vacuna"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text="0"/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="CONDITION_END" color="-" text="esperando_vacuna" identifier="COND6" model_id="PragmaDevStudio:symbol*c:\users\josé morato\downloads\tfm-marisa\psala_espera.rdd*SYM12"/>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+<MscEventRow>
+<MscEvent event_type="ABSOLUTE_TIME" color="#000000" text=""/>
+</MscEventRow>
+</MscDiagram>
