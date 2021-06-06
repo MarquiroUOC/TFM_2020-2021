@@ -4,35 +4,32 @@
 
 <SdlFSMDiagram language="sdl" type="prcs" is_extract="FALSE" is_temporary="FALSE">
 <SdlFSMPartition name="" needs_cleanup="FALSE">
-<SdlFSMSymbol identifier="SYM13" type="sdlText" text="DCL t Boolean:= false, v Boolean:= false;
-Timer T;" outline_color="-" background_color="-" center_coordinates="1190 89" dimensions="308 50" attached_symbol_id=""/>
-<NonStateTransition top_left_coordinates="1029 154">
-<SdlFSMSymbol identifier="SYM1" type="sdlStart" outline_color="-" background_color="-" center_coordinates="1103 169" dimensions="60 30" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM13" type="sdlText" text="DCL t Boolean:= false, v Boolean:= false;" outline_color="-" background_color="-" center_coordinates="1183 109" dimensions="308 40" attached_symbol_id=""/>
+<NonStateTransition top_left_coordinates="1029 159">
+<SdlFSMSymbol identifier="SYM1" type="sdlStart" outline_color="-" background_color="-" center_coordinates="1102 174" dimensions="60 30" attached_symbol_id=""/>
 <Transition>
-<SdlFSMSymbol identifier="SYM2" type="sdlState" text="esperando_turno" outline_color="-" background_color="-" center_coordinates="1103 216" dimensions="126 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM2" type="sdlState" text="esperando_turno" outline_color="-" background_color="-" center_coordinates="1102 221" dimensions="124 40" attached_symbol_id=""/>
 </Transition>
 </NonStateTransition>
 <StateTransitionBlock>
 <SdlFSMSymbolReference identifier="SYM2"/>
 <NormalStateTransition>
-<SdlFSMSymbol identifier="SYM3" type="sdlInputSig" text="turno(t)" outline_color="-" background_color="-" center_coordinates="1103 268" dimensions="78 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM3" type="sdlInputSig" text="turno(t)" outline_color="-" background_color="-" center_coordinates="1102 273" dimensions="76 40" attached_symbol_id=""/>
 <Transition>
 <DecisionBlock>
-<SdlFSMSymbol identifier="SYM4" type="sdlDecision" text="t" outline_color="-" background_color="-" center_coordinates="1103 320" dimensions="60 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM4" type="sdlDecision" text="t" outline_color="-" background_color="-" center_coordinates="1102 325" dimensions="60 40" attached_symbol_id=""/>
 <DecisionBranch>
-<SdlFSMSymbol identifier="SYM5" type="sdlAnswer" text="TRUE" outline_color="-" background_color="-" center_coordinates="1103 372" dimensions="60 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM5" type="sdlAnswer" text="TRUE" outline_color="-" background_color="-" center_coordinates="1102 377" dimensions="60 40" attached_symbol_id=""/>
 <Transition>
-<SdlFSMSymbol identifier="SYM264" type="sdlInitTimer" text="SET(NOW+120, T)" outline_color="-" background_color="-" center_coordinates="1103 424" dimensions="136 40" attached_symbol_id=""/>
-<SdlFSMSymbol identifier="SYM265" type="sdlResetTimer" text="RESET(T)" outline_color="-" background_color="-" center_coordinates="1103 476" dimensions="88 40" attached_symbol_id=""/>
-<SdlFSMSymbol identifier="SYM266" type="sdlTask" text="v:= TRUE" outline_color="-" background_color="-" center_coordinates="1103 528" dimensions="78 40" attached_symbol_id=""/>
-<SdlFSMSymbol identifier="SYM267" type="sdlSendSig" text="vacunado(v) VIA C2" outline_color="-" background_color="-" center_coordinates="1103 580" dimensions="148 40" attached_symbol_id=""/>
-<SdlFSMSymbol identifier="SYM270" type="sdlState" text="esperando_turno" outline_color="-" background_color="-" center_coordinates="1103 632" dimensions="126 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM266" type="sdlTask" text="v:= TRUE" outline_color="-" background_color="-" center_coordinates="1102 429" dimensions="76 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM267" type="sdlSendSig" text="vacunado(v) VIA C2" outline_color="-" background_color="-" center_coordinates="1102 481" dimensions="146 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM270" type="sdlState" text="esperando_turno" outline_color="-" background_color="-" center_coordinates="1102 533" dimensions="124 40" attached_symbol_id=""/>
 </Transition>
 </DecisionBranch>
 <DecisionBranch>
-<SdlFSMSymbol identifier="SYM6" type="sdlAnswer" text="else" outline_color="-" background_color="-" center_coordinates="1250 372" dimensions="60 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM6" type="sdlAnswer" text="else" outline_color="-" background_color="-" center_coordinates="1247 377" dimensions="60 40" attached_symbol_id=""/>
 <Transition>
-<SdlFSMSymbol identifier="SYM7" type="sdlState" text="esperando_turno" outline_color="-" background_color="-" center_coordinates="1250 424" dimensions="126 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM7" type="sdlState" text="esperando_turno" outline_color="-" background_color="-" center_coordinates="1247 429" dimensions="124 40" attached_symbol_id=""/>
 </Transition>
 </DecisionBranch>
 </DecisionBlock>

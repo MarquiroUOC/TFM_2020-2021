@@ -4,7 +4,7 @@
 
 <SdlFSMDiagram language="sdl" type="prcs" is_extract="FALSE" is_temporary="FALSE">
 <SdlFSMPartition name="" needs_cleanup="FALSE">
-<SdlFSMSymbol identifier="SYM23" type="sdlText" text="DCL en Integer, e Integer := 0;" outline_color="-" background_color="-" center_coordinates="593 193" dimensions="238 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM23" type="sdlText" text="DCL en Integer, e Integer := 0;" outline_color="-" background_color="-" center_coordinates="593 193" dimensions="236 40" attached_symbol_id=""/>
 <NonStateTransition top_left_coordinates="431 261">
 <SdlFSMSymbol identifier="SYM1" type="sdlStart" outline_color="-" background_color="-" center_coordinates="511 276" dimensions="60 30" attached_symbol_id=""/>
 <Transition>
@@ -34,6 +34,7 @@
 <SdlFSMSymbol identifier="SYM28" type="sdlInputSig" text="descansaenfermero(en)" outline_color="-" background_color="-" center_coordinates="684 375" dimensions="166 40" attached_symbol_id=""/>
 <Transition>
 <SdlFSMSymbol identifier="SYM29" type="sdlTask" text="e := e + en" outline_color="-" background_color="-" center_coordinates="684 427" dimensions="96 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM30" type="sdlState" text="espera_enfermero" outline_color="-" background_color="-" center_coordinates="684 479" dimensions="134 40" attached_symbol_id=""/>
 </Transition>
 </NormalStateTransition>
 </StateTransitionBlock>

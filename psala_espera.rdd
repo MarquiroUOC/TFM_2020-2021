@@ -4,38 +4,35 @@
 
 <SdlFSMDiagram language="sdl" type="prcs" is_extract="FALSE" is_temporary="FALSE">
 <SdlFSMPartition name="" needs_cleanup="FALSE">
-<SdlFSMSymbol identifier="SYM13" type="sdlText" text="DCL e Boolean, v Boolean;
-Timer T;" outline_color="-" background_color="-" center_coordinates="388 86" dimensions="194 48" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM13" type="sdlText" text="DCL e Boolean, v Boolean;" outline_color="-" background_color="-" center_coordinates="208 83" dimensions="196 40" attached_symbol_id=""/>
 <NonStateTransition top_left_coordinates="101 141">
-<SdlFSMSymbol identifier="SYM1" type="sdlStart" outline_color="-" background_color="-" center_coordinates="183 156" dimensions="60 30" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM1" type="sdlStart" outline_color="-" background_color="-" center_coordinates="167 156" dimensions="60 30" attached_symbol_id=""/>
 <Transition>
-<SdlFSMSymbol identifier="SYM2" type="sdlState" text="esperando_vacuna" outline_color="-" background_color="-" center_coordinates="183 203" dimensions="132 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM2" type="sdlState" text="esperando_vacuna" outline_color="-" background_color="-" center_coordinates="167 203" dimensions="132 40" attached_symbol_id=""/>
 </Transition>
 </NonStateTransition>
 <StateTransitionBlock>
 <SdlFSMSymbolReference identifier="SYM2"/>
 <NormalStateTransition>
-<SdlFSMSymbol identifier="SYM3" type="sdlInputSig" text="vacunado(v)" outline_color="-" background_color="-" center_coordinates="183 255" dimensions="96 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM3" type="sdlInputSig" text="vacunado(v)" outline_color="-" background_color="-" center_coordinates="167 255" dimensions="96 40" attached_symbol_id=""/>
 <Transition>
 <DecisionBlock>
-<SdlFSMSymbol identifier="SYM4" type="sdlDecision" text="v" outline_color="-" background_color="-" center_coordinates="183 307" dimensions="60 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM4" type="sdlDecision" text="v" outline_color="-" background_color="-" center_coordinates="167 307" dimensions="60 40" attached_symbol_id=""/>
 <DecisionBranch>
-<SdlFSMSymbol identifier="SYM5" type="sdlAnswer" text="= TRUE" outline_color="-" background_color="-" center_coordinates="183 359" dimensions="62 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM5" type="sdlAnswer" text="= TRUE" outline_color="-" background_color="-" center_coordinates="167 359" dimensions="62 40" attached_symbol_id=""/>
 <Transition>
 </Transition>
 </DecisionBranch>
 <DecisionBranch>
-<SdlFSMSymbol identifier="SYM6" type="sdlAnswer" text="else" outline_color="-" background_color="-" center_coordinates="290 359" dimensions="60 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM6" type="sdlAnswer" text="else" outline_color="-" background_color="-" center_coordinates="274 359" dimensions="60 40" attached_symbol_id=""/>
 <Transition>
-<SdlFSMSymbol identifier="SYM7" type="sdlState" text="esperando_vacuna" outline_color="-" background_color="-" center_coordinates="290 411" dimensions="132 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM7" type="sdlState" text="esperando_vacuna" outline_color="-" background_color="-" center_coordinates="274 411" dimensions="132 40" attached_symbol_id=""/>
 </Transition>
 </DecisionBranch>
 </DecisionBlock>
-<SdlFSMSymbol identifier="SYM8" type="sdlInitTimer" text="SET(NOW+(15*60), T)" outline_color="-" background_color="-" center_coordinates="183 475" dimensions="164 40" attached_symbol_id=""/>
-<SdlFSMSymbol identifier="SYM9" type="sdlResetTimer" text="RESET(T)" outline_color="-" background_color="-" center_coordinates="183 527" dimensions="88 40" attached_symbol_id=""/>
-<SdlFSMSymbol identifier="SYM10" type="sdlTask" text="e:= TRUE" outline_color="-" background_color="-" center_coordinates="183 579" dimensions="78 40" attached_symbol_id=""/>
-<SdlFSMSymbol identifier="SYM11" type="sdlSendSig" text="espera(e) VIA C3" outline_color="-" background_color="-" center_coordinates="183 631" dimensions="134 40" attached_symbol_id=""/>
-<SdlFSMSymbol identifier="SYM12" type="sdlState" text="esperando_vacuna" outline_color="-" background_color="-" center_coordinates="183 683" dimensions="132 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM10" type="sdlTask" text="e:= TRUE" outline_color="-" background_color="-" center_coordinates="167 475" dimensions="76 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM11" type="sdlSendSig" text="espera(e) VIA C3" outline_color="-" background_color="-" center_coordinates="167 527" dimensions="132 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM12" type="sdlState" text="esperando_vacuna" outline_color="-" background_color="-" center_coordinates="167 579" dimensions="132 40" attached_symbol_id=""/>
 </Transition>
 </NormalStateTransition>
 </StateTransitionBlock>
